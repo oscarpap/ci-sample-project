@@ -13,7 +13,7 @@ In order to run the application, you need one dependency: "github.com/lib/pq".
 This can be retrieved by running `go get`.
 
 You may want to update the database information to match your system.
-Update the following constants:
+Update the following constants in todo.go:
 
 - databaseUser
 - databaseHost
