@@ -5,7 +5,7 @@ The backend consists of three different parts:
 
 - Go application
 - PostgreSQL
-- ElasticSearch
+- NGINX
 
 ## Go application
 
@@ -24,21 +24,10 @@ Update the following constants in todo.go:
 PostgreSQL is used to store all the list and todo information.
 In order to setup the database schema, run `psql -f schema.sql db_name`.
 
-## ElasticSearch
+## NGINX
 
-ElasticSearch is used to index and search through all data.
-To create the index, run:
-
-```
-curl -XPUT 'http://localhost:9200/todo/' -d '{
-    "settings" : {
-        "number_of_shards" : 5, 
-        "number_of_replicas" : 1 
-    }
-}'
-```
-
-Assuming that ElasticSearch runs on localhost:9200 (the default).
+There is a configuration ready for using NGINX as a reverse proxy (in `nginx.conf`).
+However, the url to the application may need to be updated.
 
 ## Test
 
