@@ -202,7 +202,7 @@ func Handlers() *http.ServeMux {
 
 func main() {
 	// Listen on port 5050
-	err := http.ListenAndServe(":5050", Handlers())
+	err := http.ListenAndServe(":8080", Handlers())
 	if err != nil {
 		log.Fatal(err)
 	}
