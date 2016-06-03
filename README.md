@@ -7,6 +7,10 @@ The backend consists of three different parts:
 - PostgreSQL
 - NGINX
 
+En översikt hur de hänger ihop kan ses här:
+
+![](architecture.png)
+
 ## Go application
 
 In order to run the application, you need one dependency: "github.com/lib/pq".
