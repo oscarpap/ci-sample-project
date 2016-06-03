@@ -13,9 +13,9 @@ import (
 )
 
 const (
-	databaseUser = "simon"
-	databaseHost = "localhost"
-	databaseName = "todo"
+	databaseUser = "postgres"
+	databaseHost = "db"
+	databaseName = "postgres"
 )
 
 type Task struct {
