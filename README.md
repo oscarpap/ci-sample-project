@@ -33,6 +33,11 @@ In order to setup the database schema, run `psql -f schema.sql db_name`.
 There is a configuration ready for using NGINX as a reverse proxy (in `nginx.conf`).
 However, the url to the application may need to be updated.
 
+## Run
+
+To build to application, simply use `go build` in the project directory.
+You can also use `go run todo.go` to run the server directly.
+
 ## Test
 
 Test the system to make sure everything works.
