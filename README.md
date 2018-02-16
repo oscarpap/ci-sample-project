@@ -1,4 +1,4 @@
-HEJ HEJHEJ
+HEJ HEJ
 
 # To-Do API
 
@@ -26,7 +26,7 @@ Update the following constants in todo.go:
 - databaseName
 
 ## PostgreSQL database
-
+/TDDE06Lab2
 PostgreSQL is used to store all the list and todo information.
 In order to setup the database schema, run `psql -f schema.sql db_name`.
 
