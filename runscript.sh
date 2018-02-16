@@ -1,6 +1,7 @@
 
 docker stop pgserver || true && docker rm pgserver || true
-docker stop goserver || true && docker rm go_server || true
+docker stop goserver || true && docker rm goserver || true
+docker stop nginxserver || true && docker rm nginxserver || true
 
 docker build -t go Go
 
@@ -14,6 +15,13 @@ sleep 5
 
 docker run --name goserver --link pgserver:db go go test
 
+sleep 5
+
+docker run --name nginxserver --link goserver:app -p 80:80 nginx
+
 docker stop pgserver
+docker stop goserver
+docker stop nginxserver
 docker rm pgserver
 docker rm goserver
+docker rm nginxserver
