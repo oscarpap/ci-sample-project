@@ -13,7 +13,7 @@ docker run --name pgserver -it -d pg
 
 sleep 5
 
-docker run --name goserver --link pgserver:db go go test
+docker run --name goserver --link pgserver:db go
 
 sleep 5
 
