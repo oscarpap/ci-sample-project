@@ -17,7 +17,7 @@ docker run --name goserver --link pgserver:db go go test
 
 sleep 5
 
-docker run --name nginxserver --link goserver:app -p 80:80 nginx
+docker run --name nginxserver --link goserver:app nginx
 
 docker stop pgserver
 docker stop goserver
