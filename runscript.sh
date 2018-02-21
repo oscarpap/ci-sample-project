@@ -19,6 +19,8 @@ sleep 5
 
 docker run --name nginxserver --link goserver:app nginx
 
+sleep 5
+
 docker stop pgserver
 docker stop goserver
 docker stop nginxserver
