@@ -2,14 +2,16 @@ version: '2'
 services:
   nginx:
     build: NGINX
+    ports:
+     - "8090:80"
     depends_on:
      - web
 
   web:
     build: Go
     ports:
-     - "8090:8080"
-    links:
+     - "8081:8080"
+    depends_on:
      - db
 
   db:
