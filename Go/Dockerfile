@@ -8,4 +8,6 @@ RUN go install -v ./...
 
 EXPOSE 8090
 
-CMD ["app"]
+RUN go build 
+
+CMD go run todo.go
