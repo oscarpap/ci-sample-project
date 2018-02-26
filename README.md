@@ -1,4 +1,3 @@
-Trigger pull
 
 # To-Do API
 
